@@ -25,3 +25,27 @@ form.addEventListener(`submit`, function (v){
     form.elements.entry.value = ``;
 
 });
+
+// Bonus
+const darkMode = document.querySelector(`#dm`)
+
+const everyElement = document.querySelectorAll(`*`);
+console.dir(everyElement);
+darkMode.addEventListener(`click`, () => {
+    for (element of everyElement){
+        element.classList.toggle(`dark-mode`);
+    }
+})
+
+const times = document.querySelector(`#times`);
+
+let num =1;
+times.addEventListener(`click`, () => {
+    if (num < 3){
+        alert(`You clicked the last button! Congrats!`);
+        num++;
+    } else if (num === 3){
+        alert(`OH NO! This button is NOT going to work anymore.x`)
+        num++;
+    }
+})
